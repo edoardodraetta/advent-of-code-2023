@@ -38,6 +38,14 @@ with open("./2/input.in") as file:
                 n_blue = 0
             else:
                 n_blue = int(n_blue[0])
+            
+            if type(n_red) is not int:
+                raise TypeError("Red number is not of valid type", n_red)
+            if type(n_green) is not int:
+                raise TypeError("Green number is not of valid type", n_green)
+            if type(n_blue) is not int:
+                raise TypeError("Blue number is not of valid type", n_blue)
+
 
             # if (n_red > MAX_RED or n_green > MAX_GREEN or n_blue > MAX_BLUE):
             #     print("---! Found invalid game.")
@@ -51,8 +59,8 @@ with open("./2/input.in") as file:
             if n_blue > min_possible_blue:
                 min_possible_blue = n_blue
 
-            sum += min_possible_red * min_possible_green * min_possible_blue
-
+            print(min_possible_red, min_possible_green, min_possible_blue)
+        sum += min_possible_red * min_possible_green * min_possible_blue
 
 
         print(game_number, sum)
