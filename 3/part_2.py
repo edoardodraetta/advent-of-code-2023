@@ -27,7 +27,7 @@ for r, row in enumerate(data): # Loop through the data
 
 cumsum = 0 
 for k in cogs.keys():
-    if len(cogs[k]) > 1:ga
+    if len(cogs[k]) > 1:
         print(cogs[k])
         prod = 1
         for i in cogs[k]:
